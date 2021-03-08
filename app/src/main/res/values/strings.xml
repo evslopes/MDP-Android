@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Mãe da Prole</string>
+    <string name="label_Doula">Doula</string>
+    <string name="label_Gestante">Gestante</string>
+    <string name="label_MeuDia">Meu Dia</string>
+    <string name="label_MinhaInspiracao">Minha Inspiração</string>
+    <string name="label_Perfil">Meu Perfil</string>
+
 </resources>
