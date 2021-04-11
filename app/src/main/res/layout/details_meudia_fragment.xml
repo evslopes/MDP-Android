@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailsTicketFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.meudia.details.DetailsMeuDiaFragment" >
+
+    <TextView
+        android:id="@+id/textViewCategoriaDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:hint="Categoria..."
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelCategoriaDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHorarioDetail" />
+
+    <TextView
+        android:id="@+id/textLabelCategoriaDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Categoria -"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelHorarioDetail" />
+
+    <TextView
+        android:id="@+id/textViewNomeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:hint="Nome..."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetail"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
+
+    <TextView
+        android:id="@+id/textLabelNomeDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Nome Ticket - "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
+
+    <ImageView
+        android:id="@+id/imageViewFotoMeuDiaDetails"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBackDetailsTicket" />
+
+    <TextView
+        android:id="@+id/textLabelLocalDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Local - "
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelNomeDetail" />
+
+    <TextView
+        android:id="@+id/textViewLocalDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:hint="Local..."
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelLocalDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeDetail" />
+
+    <TextView
+        android:id="@+id/textLabelDataDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Data -"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelLocalDetail" />
+
+    <TextView
+        android:id="@+id/textViewDataDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:hint="Data..."
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelDataDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocalDetail" />
+
+    <TextView
+        android:id="@+id/textLabelHorarioDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Horário -"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelDataDetail" />
+
+    <TextView
+        android:id="@+id/textViewHorarioDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:hint="Horário..."
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelHorarioDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDataDetail" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:contentDescription="Editar ticket"
+        android:src="@android:drawable/ic_menu_edit"
+        app:backgroundTint="#2196F3"
+        app:fabCustomSize="50sp"
+        app:fabSize="auto"
+        app:layout_constraintBottom_toTopOf="@+id/fabDeleteTicket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#2196F3" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDeleteTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:contentDescription="Deletar ticket"
+        android:src="@android:drawable/ic_menu_delete"
+        app:backgroundTint="#FF0000"
+        app:fabCustomSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewBackDetailsTicket"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Voltar"
+        android:src="@drawable/abc_vector_test"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

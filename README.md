@@ -17,3 +17,4 @@ Conteúdo com informações acerca da gestação, demonstrando tempo linear, com
 ## Considerações
 
 Projeto em desenvolvimento, estando em fase inicial.
+

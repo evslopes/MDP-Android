@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/label_MinhaInspiracao" />
-    <item android:title="@string/label_MeuDia" />
-    <item android:title="@string/label_Perfil" />
+    <item
+        android:id="@+id/listMeuDiaFragment"
+        android:icon="@drawable/ticket_icon"
+        android:title="MeuDia" />
+    <item
+        android:id="@+id/detailsUserFragment"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Perfil" />
 </menu>

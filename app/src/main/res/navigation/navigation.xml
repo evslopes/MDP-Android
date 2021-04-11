@@ -2,67 +2,42 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation"
-    app:startDestination="@id/carregamentoFragment">
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/carregamentoFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.home.CarregamentoFragment"
-        android:label="fragment_carregamento"
-        tools:layout="@layout/fragment_carregamento" >
-        <action
-            android:id="@+id/action_carregamentoFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_perfilFragment"
-            app:destination="@id/perfilFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_inspiracaoFragment"
-            app:destination="@id/inspiracaoFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_meuDiaFragment"
-            app:destination="@id/meuDiaFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/loginFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        android:name="br.pro.evslopes.maedaprole.ui.user.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" />
     <fragment
-        android:id="@+id/perfilFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.perfil.PerfilFragment"
-        android:label="perfil_fragment"
-        tools:layout="@layout/perfil_fragment" >
-        <action
-            android:id="@+id/action_perfilFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        android:id="@+id/cadastroFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.user.cadastro.CadastroFragment"
+        android:label="cadastro_fragment"
+        tools:layout="@layout/cadastro_fragment" />
     <fragment
-        android:id="@+id/meuDiaFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.MeuDiaFragment"
-        android:label="fragment_meu_dia"
-        tools:layout="@layout/fragment_meu_dia" >
-        <action
-            android:id="@+id/action_meuDiaFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        android:id="@+id/listMeuDiaFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.list.ListMeuDiaFragment"
+        android:label="list_tickets_fragment"
+        tools:layout="@layout/list_meudia_fragment" />
     <fragment
-        android:id="@+id/inspiracaoFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.inspiracao.InspiracaoFragment"
-        android:label="fragment_inspiracao"
-        tools:layout="@layout/fragment_inspiracao" >
-        <action
-            android:id="@+id/action_inspiracaoFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
+        android:id="@+id/detailsTicketFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.details.DetailsMeuDiaFragment"
+        android:label="details_ticket_fragment"
+        tools:layout="@layout/details_meudia_fragment" />
+    <fragment
+        android:id="@+id/formTicketFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.form.FormMeuDiaFragment"
+        android:label="form_ticket_fragment"
+        tools:layout="@layout/form_meudia_fragment" />
+    <fragment
+        android:id="@+id/detailsUserFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.user.details.DetailsUserFragment"
+        android:label="details_user_fragment"
+        tools:layout="@layout/details_user_fragment" />
+    <fragment
+        android:id="@+id/formUserFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.user.update.UpdateUserFragment"
+        android:label="form_user_fragment"
+        tools:layout="@layout/form_user_fragment" />
 </navigation>

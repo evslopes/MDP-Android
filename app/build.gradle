@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -45,7 +47,15 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
+    implementation 'com.google.firebase:firebase-auth:20.0.3'
+    implementation 'com.google.firebase:firebase-database:19.7.0'
+    implementation 'com.google.firebase:firebase-firestore-ktx:22.1.2'
+    implementation 'com.google.firebase:firebase-storage-ktx:19.2.2'
+    implementation 'com.google.firebase:firebase-ads:20.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //AdMob SDK
+    implementation 'com.google.android.gms:play-services-ads:19.7.0'
 }
