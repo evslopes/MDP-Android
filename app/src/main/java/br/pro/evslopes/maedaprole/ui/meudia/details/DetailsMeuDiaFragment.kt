@@ -33,7 +33,7 @@ class DetailsMeuDiaFragment : Fragment() {
         val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationApp)
         bottomNavigationView.visibility = View.GONE
 
-        viewModel.downloadFoto()
+        viewModel.downloadImagem()
         viewModel.imagemPerfil.observe(viewLifecycleOwner, Observer {
             if(it != null) {
                 imageViewFotoMeuDiaDetails.setImageURI(it)

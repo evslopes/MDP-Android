@@ -46,8 +46,8 @@ class LoginFragment : Fragment() {
         btnLogin.setOnClickListener {
             val email = editTextEmailLogin.text.toString()
             val senha = editTextSenhaLogin.text.toString()
-            if(validarEmailESenha(email, senha)) {
-                viewModel.verificarCredenciais(email, senha)
+            if(validandoEmailESenha(email, senha)) {
+                viewModel.verificandoCredenciais(email, senha)
             }
             else {
                 makeToast("Favor preencher Email Senha")
@@ -61,7 +61,7 @@ class LoginFragment : Fragment() {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
     }
 
-    fun validarEmailESenha(email: String, senha: String) : Boolean {
+    fun validandoEmailESenha(email: String, senha: String) : Boolean {
         return !email.isNullOrBlank() && !senha.isNullOrBlank()
     }
 }

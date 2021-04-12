@@ -63,17 +63,17 @@ class FormMeuDiaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         ArrayAdapter.createFromResource(requireActivity(), R.array.categorias_array, android.R.layout.simple_spinner_dropdown_item).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinnerCategoriaAddMeuDia.adapter = adapter
+            tipoMeuDia.adapter = adapter
         }
-        spinnerCategoriaAddMeuDia.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        tipoMeuDia.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,
                 position: Int,
                 id: Long
             ) {
-                viewModel.categoriaSelecionada(parent!!.getItemAtPosition(position).toString())
-                makeToast("${viewModel.categoriaSelecionadaString}")
+                viewModel.tipoSelecionado(parent!!.getItemAtPosition(position).toString())
+                makeToast("${viewModel.tipoSelecionadoString}")
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -90,17 +90,17 @@ class FormMeuDiaFragment : Fragment() {
         }
 
         fabSaveMeuDia.setOnClickListener {
-            val local = CriptoString()
-            local.setClearText(editTextMsgAddMeuDia.text.toString())
-            val nome = editTextTituloAddMeuDia.text.toString()
+            val descricao = CriptoString()
+            descricao.setClearText(editTextMsgAddMeuDia.text.toString())
+            val titulo = editTextTituloAddMeuDia.text.toString()
             val data = editTextDataAddMeuDia.text.toString()
             val hora = editTextHoraAddMeuDia.text.toString()
-            val categoria = viewModel.categoriaSelecionadaString
-            if(verificarCategoriaPadrao(categoria)) {
+            val tipo = viewModel.tipoSelecionadoString
+            if(verificarCategoriaPadrao(tipo)) {
                 makeToast("Categoria deve ser selecionada!!")
             }
-            else if (verificarCamposVazios(local, nome, data, hora)){
-                viewModel.salvarTicket(nome, local, data, hora, categoria!!)
+            else if (verificarCamposVazios(descricao, titulo, data, hora)){
+                viewModel.salvarMeuDia(titulo, descricao, data, hora, tipo!!)
             }
             else {
                 makeToast("Todos os campos devem ser preenchidos!")
@@ -139,10 +139,10 @@ class FormMeuDiaFragment : Fragment() {
         editTextTituloAddMeuDia.setText(meuDia.titulo)
         editTextDataAddMeuDia.setText(meuDia.data)
         editTextHoraAddMeuDia.setText(meuDia.hora)
-        spinnerCategoriaAddMeuDia.setSelection((spinnerCategoriaAddMeuDia.getAdapter() as? ArrayAdapter<String>)!!.getPosition(meuDia.tipo))
+        tipoMeuDia.setSelection((tipoMeuDia.getAdapter() as? ArrayAdapter<String>)!!.getPosition(meuDia.tipo))
 
-        viewModel.receberFoto()
-        viewModel.imagemTicket.observe(viewLifecycleOwner, Observer { foto ->
+        viewModel.downloadFoto()
+        viewModel.imagemMeuDia.observe(viewLifecycleOwner, Observer { foto ->
             if(foto != null) {
                 imageViewAddMeuDiaImage.setImageURI(foto)
             }

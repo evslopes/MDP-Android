@@ -44,16 +44,16 @@ class UpdateUserFragment : Fragment() {
             var nome = editTextNomeAtualizacaoUsuario.text.toString()
             var sobrenome = editTextSobrenomeAtualizacaoUsuario.text.toString()
 
-            if(verificarNomeSobrenomeVazios(nome, sobrenome)) {
+            if(nomeSobrenomeVazios(nome, sobrenome)) {
                 viewModel.updateUsuario(nome, sobrenome)
             }
             else {
-                makeToast("Favor preecher todos os campos!")
+                makeToast("Favor preencher todos os campos!")
             }
         }
     }
 
-    fun verificarNomeSobrenomeVazios(nome: String, sobrenome: String) = !nome.isNullOrBlank() && !sobrenome.isNullOrBlank()
+    fun nomeSobrenomeVazios(nome: String, sobrenome: String) = !nome.isNullOrBlank() && !sobrenome.isNullOrBlank()
 
     private fun makeToast(msg: String) {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()

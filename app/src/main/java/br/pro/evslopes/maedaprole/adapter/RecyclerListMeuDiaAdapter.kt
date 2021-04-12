@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.pro.evslopes.maedaprole.R
-import br.pro.evslopes.maedaprole.enums.CategoriaEnum
+import br.pro.evslopes.maedaprole.enums.Tipos
 import br.pro.evslopes.maedaprole.model.MeuDia
 
 
@@ -37,22 +37,23 @@ class RecyclerListMeuDiaAdapter(
 
         var mBitmapIds = arrayListOf<Int>()
         var uris = arrayListOf<Uri>()
-        mBitmapIds.add(CategoriaEnum.CURIOSIDADE.caminho)
-        mBitmapIds.add(CategoriaEnum.ALERTA.caminho)
-        mBitmapIds.add(CategoriaEnum.RECORDACAO.caminho)
-        mBitmapIds.add(CategoriaEnum.MEUBEBE.caminho)
-        mBitmapIds.add(CategoriaEnum.GESTACAO.caminho)
+        mBitmapIds.add(Tipos.ALERTA.caminho)
+        mBitmapIds.add(Tipos.CURIOSIDADE.caminho)
+        mBitmapIds.add(Tipos.GESTACAO.caminho)
+        mBitmapIds.add(Tipos.MEUBEBE.caminho)
+        mBitmapIds.add(Tipos.RECORDACAO.caminho)
 
-        if(meuDia.tipo == "Cinema") {
+
+        if(meuDia.tipo == "alerta") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[0]))
         }
-        else if(meuDia.tipo == "Teatro") {
+        else if(meuDia.tipo == "curiosidade") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[1]))
         }
-        else if(meuDia.tipo == "Festa") {
+        else if(meuDia.tipo == "gestacao") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[2]))
         }
-        else if(meuDia.tipo == "Show") {
+        else if(meuDia.tipo == "meubebe") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[3]))
         }
         else {

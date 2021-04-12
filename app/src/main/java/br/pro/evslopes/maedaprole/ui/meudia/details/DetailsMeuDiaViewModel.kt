@@ -19,7 +19,7 @@ class DetailsMeuDiaViewModel(application: Application, private val meuDiaDao: Me
     private val _imagemPerfil = MutableLiveData<Uri>()
     var imagemPerfil: LiveData<Uri> = _imagemPerfil
 
-    fun downloadFoto() {
+    fun downloadImagem() {
         val file = File(app.cacheDir, "${Random.nextInt(0, Int.MAX_VALUE)}.jpeg")
         val usuarioId = UserFirebaseDao.firebaseAuth.currentUser.uid
         if(ObjetoUtil.meuDiaSelecionado!!.titulo != null) {

@@ -24,7 +24,7 @@ class UpdateUserViewModel : ViewModel() {
                 _status.value = true
             }
             .addOnFailureListener {
-                Log.e("upadteUsuario", "${it.message}")
+                Log.e("Atualizaçao Usuário", "${it.message}")
             }
     }
 }

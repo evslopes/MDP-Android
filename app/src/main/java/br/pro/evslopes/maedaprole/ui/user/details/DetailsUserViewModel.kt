@@ -25,7 +25,7 @@ class DetailsUserViewModel(private val ticketDao: MeuDiaDao) : ViewModel() {
             }
         }
     }
-    fun attPerfil() {
+    fun updatePerfil() {
         UserFirebaseDao.consultarUsuario().addOnSuccessListener {
             val usuario = it.toObject(User::class.java)
             usuario!!.firebaseUser = UserFirebaseDao.firebaseAuth.currentUser

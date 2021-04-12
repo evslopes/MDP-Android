@@ -100,11 +100,11 @@
 
     <string-array name="categorias_array">
         <item >Selecionar Categoria</item>
-        <item>Cinema</item>
-        <item>Teatro</item>
-        <item>Festa</item>
-        <item>Show</item>
-        <item>Eventos Esportivos</item>
+        <item>Alerta</item>
+        <item>Curiosidade</item>
+        <item>Gestação</item>
+        <item>Meu bebê</item>
+        <item>Recordação</item>
     </string-array>
 
 </resources>

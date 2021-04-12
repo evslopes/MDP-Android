@@ -32,25 +32,25 @@ class DetailsUserFragment : Fragment() {
 
         viewModel.usuario.observe(viewLifecycleOwner, Observer {
             if(it != null) {
-                preencherInformacoesPerfil(it)
+                InformacoesDoPerfil(it)
             }
             else if(UserFirebaseDao.firebaseAuth.currentUser == null) {
                 findNavController().navigate(R.id.loginFragment)
-                limparInformacoesPerfil()
+                clearPerfil()
             }
         })
-        viewModel.attPerfil()
+        viewModel.updatePerfil()
         return view
     }
 
-    private fun limparInformacoesPerfil() {
+    private fun clearPerfil() {
         textViewNomeDetailUser.text = null
         textViewSobrenomeDetailUser.text = null
         textViewEmailDetailUser.text = null
         textViewIsDoulaDetailUser.text = null
     }
 
-    private fun preencherInformacoesPerfil(usuario: User) {
+    private fun InformacoesDoPerfil(usuario: User) {
         textViewNomeDetailUser.text = usuario.nome
         textViewSobrenomeDetailUser.text = usuario.sobrenome
         textViewEmailDetailUser.text = usuario.email

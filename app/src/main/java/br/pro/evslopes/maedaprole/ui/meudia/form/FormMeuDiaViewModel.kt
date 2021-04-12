@@ -17,7 +17,7 @@ import br.pro.evslopes.maedaprole.model.MeuDia
 import java.io.File
 import kotlin.random.Random
 
-class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDiaDao) : AndroidViewModel(application) {
+class FormMeuDiaViewModel(application: Application, private val meuDiaDao: MeuDiaDao) : AndroidViewModel(application) {
 
     private var fotoPerfil: Bitmap? = null
 
@@ -29,31 +29,31 @@ class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDi
     private val _message = MutableLiveData<String?>()
     val message: LiveData<String?> = _message
 
-    var categoriaSelecionadaString : String? = null
+    var tipoSelecionadoString : String? = null
 
-    private val _imagemTicket = MutableLiveData<Uri>()
-    var imagemTicket: LiveData<Uri> = _imagemTicket
+    private val _imagemMeuDia = MutableLiveData<Uri>()
+    var imagemMeuDia: LiveData<Uri> = _imagemMeuDia
 
     init {
         _status.value = false
         _message.value = null
     }
 
-    fun salvarTicket(nome: String, local: CriptoString, data: String, hora: String, categoria: String) {
+    fun salvarMeuDia(titulo: String, descricao: CriptoString, data: String, hora: String, tipo: String) {
         _status.value = false
-        _message.value = "Aguarde a persistência..."
+        _message.value = "Aguarde um instante, salvando"
 
-        val meuDia = MeuDia(nome, local, data, hora, categoria)
+        val meuDia = MeuDia(titulo, descricao, data, hora, tipo)
 
         if(ObjetoUtil.meuDiaSelecionado != null) {
             meuDia.id = ObjetoUtil.meuDiaSelecionado!!.id
             meuDia.userId = ObjetoUtil.meuDiaSelecionado!!.userId
             if(fotoPerfil != null) {
-                ticketDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.titulo!!.trim())
+                meuDiaDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.titulo!!.trim())
                     .addOnSuccessListener {
-                        ticketDao.edit(meuDia).addOnSuccessListener {
+                        meuDiaDao.edit(meuDia).addOnSuccessListener {
                             _status.value = true
-                            _message.value = "Persistência concluída!"
+                            _message.value = "Salvo"
                         }.addOnFailureListener {
                             Log.e("meuDiaFirestore", "${it.message}")
                         }
@@ -66,11 +66,11 @@ class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDi
         }
         else {
             if(fotoPerfil != null) {
-                    ticketDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.titulo!!.trim())
+                    meuDiaDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.titulo!!.trim())
                         .addOnSuccessListener {
-                            ticketDao.insert(meuDia).addOnSuccessListener {
+                            meuDiaDao.insert(meuDia).addOnSuccessListener {
                                 _status.value = true
-                                _message.value = "Persistência concluída!"
+                                _message.value = "Salvo"
                             }.addOnFailureListener{
                                 Log.e("meuDiaFirestore", "${it.message}")
                             }
@@ -85,13 +85,13 @@ class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDi
         }
     }
 
-    fun receberFoto() {
+    fun downloadFoto() {
         val file = File(app.cacheDir, "${Random.nextInt(0, Int.MAX_VALUE)}.jpeg")
         val usuarioId = UserFirebaseDao.firebaseAuth.currentUser.uid
         if(ObjetoUtil.meuDiaSelecionado!!.titulo != null) {
-            ticketDao.receberImagem(usuarioId, file, ObjetoUtil.meuDiaSelecionado!!.titulo!!)
+            meuDiaDao.receberImagem(usuarioId, file, ObjetoUtil.meuDiaSelecionado!!.titulo!!)
                     .addOnSuccessListener {
-                        _imagemTicket.value = file.toUri()
+                        _imagemMeuDia.value = file.toUri()
                         val bitmap = BitmapFactory.decodeFile(file.path)
                         fotoPerfil = bitmap
                     }
@@ -105,7 +105,7 @@ class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDi
         fotoPerfil = img
     }
 
-    fun categoriaSelecionada(categoria : String) {
-        categoriaSelecionadaString = categoria
+    fun tipoSelecionado(tipo : String) {
+        tipoSelecionadoString = tipo
     }
 }

@@ -18,7 +18,7 @@ interface MeuDiaDao {
 
     fun read(key: String): Query
 
-    fun edit(ticket: MeuDia): Task<Void>
+    fun edit(meuDia: MeuDia): Task<Void>
 
     fun cadastrarImagemPerfil(imagem: Bitmap, uid: String, tituloMeuDia: String): UploadTask
 

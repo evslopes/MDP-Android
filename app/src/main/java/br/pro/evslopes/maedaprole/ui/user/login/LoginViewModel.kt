@@ -12,7 +12,7 @@ class LoginViewModel : ViewModel() {
     private val _msg = MutableLiveData<String>()
     val msg: LiveData<String> = _msg
 
-    fun verificarCredenciais(email: String, senha: String) {
+    fun verificandoCredenciais(email: String, senha: String) {
         UserFirebaseDao.verificarCredencias(email, senha).addOnSuccessListener {
             _status.value = true
         }.addOnFailureListener {
