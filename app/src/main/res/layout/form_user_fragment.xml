@@ -7,19 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.user.update.UpdateUserFragment" >
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabSaveUpdateUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="40dp"
-        android:clickable="true"
-        android:contentDescription="Atualizar usuário"
-        android:src="@android:drawable/ic_menu_save"
-        app:backgroundTint="#029A08"
-        app:fabCustomSize="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewBackUpdateUsuario"
@@ -27,18 +14,18 @@
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:contentDescription="Voltar"
+        android:contentDescription="@string/imageViewBackUpdateUsuarioDesccricao"
         android:src="@drawable/abc_vector_test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/black" />
 
     <TextView
-        android:id="@+id/textLabelUpdateUsuário"
+        android:id="@+id/textLabelAtualizacaoUsuário"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
-        android:text="Update Usuário"
+        android:text="@string/textLabelAtualizacaoUsuário"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,18 +41,18 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelUpdateUsuário">
+        app:layout_constraintTop_toBottomOf="@+id/textLabelAtualizacaoUsuário">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextNomeUpdateUsuario"
+            android:id="@+id/editTextNomeAtualizacaoUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome"
+            android:hint="@string/htineditTextNomeAtualizacaoUsuario"
             android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutSobrenomeUpdateUsuario"
+        android:id="@+id/textInputLayoutSobrenomeAtualizacaoUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -76,11 +63,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNomeUpdateUsuario">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextSobrenomeUpdateUsuario"
+            android:id="@+id/editTextSobrenomeAtualizacaoUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Sobrenome"
+            android:hint="@string/editTextSobrenomeAtualizacaoUsuario"
             android:inputType="textPersonName"/>
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveAtualizacaoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:contentDescription="@string/fabSaveAtualizacaoUsuarioDescricao"
+        android:src="@android:drawable/ic_menu_save"
+        app:backgroundTint="#827717"
+        app:fabCustomSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,60 +14,38 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="40dp"
         android:clickable="true"
-        android:contentDescription="Editar usuário"
+        android:contentDescription="@string/DescricaofabEditUser"
         android:src="@android:drawable/ic_menu_edit"
-        app:backgroundTint="#2196F3"
+        app:backgroundTint="#827717"
         app:fabCustomSize="50sp"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:rippleColor="#2196F3" />
+        app:rippleColor="#827717" />
 
     <TextView
-        android:id="@+id/textViewIsDoulaDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:hint="Tickets..."
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelQntdTicketsDetailUser"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmailDetailUser" />
-
-    <TextView
-        android:id="@+id/textLabelQntdTicketsDetailUser"
+        android:id="@+id/textLabelNomeDetailUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:text="Quantidade de Tickets -"
+        android:layout_marginTop="80dp"
+        android:text="@string/textLabelNomeDetailUser"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelEmailDetailUser" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textLabelEmailDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:text="E-mail -"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelSobrenomeDetailUser" />
-
-    <TextView
-        android:id="@+id/textViewEmailDetailUser"
+        android:id="@+id/textViewNomeDetailUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:hint="E-mail..."
+        android:layout_marginTop="80dp"
+        android:hint="@string/textViewNomeDetailUser"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelEmailDetailUser"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSobrenomeDetailUser" />
+        app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetailUser"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <TextView
         android:id="@+id/textLabelSobrenomeDetailUser"
@@ -92,35 +70,63 @@
         app:layout_constraintStart_toEndOf="@+id/textLabelSobrenomeDetailUser"
         app:layout_constraintTop_toBottomOf="@+id/textViewNomeDetailUser" />
 
+
     <TextView
-        android:id="@+id/textLabelNomeDetailUser"
+        android:id="@+id/textLabelEmailDetailUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="80dp"
-        android:text="Nome -"
+        android:layout_marginTop="20dp"
+        android:text="@string/textLabelEmailDetailUser"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textLabelSobrenomeDetailUser" />
 
     <TextView
-        android:id="@+id/textViewNomeDetailUser"
+        android:id="@+id/textViewEmailDetailUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="80dp"
-        android:hint="Nome..."
+        android:layout_marginTop="20dp"
+        android:hint="@string/textViewEmailDetailUser"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetailUser"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/textLabelEmailDetailUser"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSobrenomeDetailUser" />
+
+
+
+    <TextView
+        android:id="@+id/textViewIsDoulaDetailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/textViewIsDoulaDetailUser"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelQntdTicketsDetailUser"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailDetailUser" />
+
+    <TextView
+        android:id="@+id/textLabelQntdTicketsDetailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/textLabelQntdTicketsDetailUser"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelEmailDetailUser" />
+
+
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Logout"
+        android:text="@string/btnLogout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewIsDoulaDetailUser" />

@@ -40,13 +40,13 @@ class MeuDiaDaoFirestore : MeuDiaDao {
         return collection.document(meuDia.id!!).set(meuDia)
     }
 
-    override fun cadastrarImagemPerfil(imagem: Bitmap, uid: String, nomeMeuDia: String): UploadTask {
+    override fun cadastrarImagemPerfil(imagem: Bitmap, uid: String, tituloMeuDia: String): UploadTask {
         val outPutStream = ByteArrayOutputStream()
         imagem.compress(Bitmap.CompressFormat.JPEG, 100, outPutStream)
-        return storage.child("${uid}/${nomeMeuDia}.jpeg").putBytes(outPutStream.toByteArray())
+        return storage.child("${uid}/${tituloMeuDia}.jpeg").putBytes(outPutStream.toByteArray())
     }
 
-    override fun receberImagem(uid: String, file: File, nomeMeuDia: String): FileDownloadTask {
-        return storage.child("${uid}/${nomeMeuDia}.jpeg").getFile(file)
+    override fun receberImagem(uid: String, file: File, tituloMeuDia: String): FileDownloadTask {
+        return storage.child("${uid}/${tituloMeuDia}.jpeg").getFile(file)
     }
 }

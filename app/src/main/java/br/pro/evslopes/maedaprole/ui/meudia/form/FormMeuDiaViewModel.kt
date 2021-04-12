@@ -49,7 +49,7 @@ class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDi
             meuDia.id = ObjetoUtil.meuDiaSelecionado!!.id
             meuDia.userId = ObjetoUtil.meuDiaSelecionado!!.userId
             if(fotoPerfil != null) {
-                ticketDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.nome!!.trim())
+                ticketDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.titulo!!.trim())
                     .addOnSuccessListener {
                         ticketDao.edit(meuDia).addOnSuccessListener {
                             _status.value = true
@@ -66,7 +66,7 @@ class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDi
         }
         else {
             if(fotoPerfil != null) {
-                    ticketDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.nome!!.trim())
+                    ticketDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.titulo!!.trim())
                         .addOnSuccessListener {
                             ticketDao.insert(meuDia).addOnSuccessListener {
                                 _status.value = true
@@ -88,8 +88,8 @@ class FormMeuDiaViewModel(application: Application, private val ticketDao: MeuDi
     fun receberFoto() {
         val file = File(app.cacheDir, "${Random.nextInt(0, Int.MAX_VALUE)}.jpeg")
         val usuarioId = UserFirebaseDao.firebaseAuth.currentUser.uid
-        if(ObjetoUtil.meuDiaSelecionado!!.nome != null) {
-            ticketDao.receberImagem(usuarioId, file, ObjetoUtil.meuDiaSelecionado!!.nome!!)
+        if(ObjetoUtil.meuDiaSelecionado!!.titulo != null) {
+            ticketDao.receberImagem(usuarioId, file, ObjetoUtil.meuDiaSelecionado!!.titulo!!)
                     .addOnSuccessListener {
                         _imagemTicket.value = file.toUri()
                         val bitmap = BitmapFactory.decodeFile(file.path)

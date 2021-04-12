@@ -32,27 +32,27 @@ class RecyclerListMeuDiaAdapter(
 
     override fun onBindViewHolder(holder: MeuDiaViewHolder, position: Int) {
         val meuDia = meuDia[position]
-        holder.txtNomeMeuDia.text = meuDia.nome
+        holder.txtNomeMeuDia.text = meuDia.titulo
         holder.txtDataMeuDia.text = meuDia.data.toString()
 
         var mBitmapIds = arrayListOf<Int>()
         var uris = arrayListOf<Uri>()
-        mBitmapIds.add(CategoriaEnum.CINEMA.caminho)
-        mBitmapIds.add(CategoriaEnum.TEATRO.caminho)
-        mBitmapIds.add(CategoriaEnum.FESTA.caminho)
-        mBitmapIds.add(CategoriaEnum.SHOW.caminho)
-        mBitmapIds.add(CategoriaEnum.EVENTOESPORTIVO.caminho)
+        mBitmapIds.add(CategoriaEnum.CURIOSIDADE.caminho)
+        mBitmapIds.add(CategoriaEnum.ALERTA.caminho)
+        mBitmapIds.add(CategoriaEnum.RECORDACAO.caminho)
+        mBitmapIds.add(CategoriaEnum.MEUBEBE.caminho)
+        mBitmapIds.add(CategoriaEnum.GESTACAO.caminho)
 
-        if(meuDia.categoria == "Cinema") {
+        if(meuDia.tipo == "Cinema") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[0]))
         }
-        else if(meuDia.categoria == "Teatro") {
+        else if(meuDia.tipo == "Teatro") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[1]))
         }
-        else if(meuDia.categoria == "Festa") {
+        else if(meuDia.tipo == "Festa") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[2]))
         }
-        else if(meuDia.categoria == "Show") {
+        else if(meuDia.tipo == "Show") {
             uris.add(Uri.parse("android.resource://br.pro.evslopes.maedaprole/drawable/" + mBitmapIds[3]))
         }
         else {

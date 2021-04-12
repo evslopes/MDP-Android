@@ -10,49 +10,15 @@
     <TextView
         android:id="@+id/textLabelLogin"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:text="Login"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/textLabelLogin"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textLabelAinda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
-        android:text="Ainda não é cadastrado?"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="5dp"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSenhaLogin" />
-
-    <TextView
-        android:id="@+id/textViewCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:text=" Cadastre-se"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelAinda"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutEmailLogin"
@@ -69,7 +35,8 @@
             android:id="@+id/editTextEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/HintEmailLogin"
+            android:textColorHint="#827717"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,8 +55,62 @@
             android:id="@+id/editTextSenhaLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha"
+            android:hint="@string/HintSenhaLogin"
+            android:textColorHint="#827717"
             android:inputType="textPassword" />/>
     </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/textLabelPergunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/textLabelPergunta"
+        android:textColor="#827717"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="157dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/maedaprolelogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSenhaLogin" />
+
+    <TextView
+        android:id="@+id/textViewCadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="@string/textViewCadastro"
+        android:textColor="#0D47A1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelPergunta"
+        app:layout_constraintVertical_bias="0.114" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

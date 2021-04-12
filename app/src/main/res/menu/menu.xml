@@ -3,10 +3,10 @@
 
     <item
         android:id="@+id/listMeuDiaFragment"
-        android:icon="@drawable/ticket_icon"
+        android:icon="@android:drawable/ic_input_get"
         android:title="MeuDia" />
     <item
         android:id="@+id/detailsUserFragment"
-        android:icon="@android:drawable/ic_menu_myplaces"
+        android:icon="@android:drawable/ic_menu_edit"
         android:title="Perfil" />
 </menu>

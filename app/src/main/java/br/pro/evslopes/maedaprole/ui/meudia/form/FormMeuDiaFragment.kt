@@ -89,10 +89,10 @@ class FormMeuDiaFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        fabSaveTicket.setOnClickListener {
+        fabSaveMeuDia.setOnClickListener {
             val local = CriptoString()
-            local.setClearText(editTextLocalAddMeuDia.text.toString())
-            val nome = editTextNomeAddMeuDia.text.toString()
+            local.setClearText(editTextMsgAddMeuDia.text.toString())
+            val nome = editTextTituloAddMeuDia.text.toString()
             val data = editTextDataAddMeuDia.text.toString()
             val hora = editTextHoraAddMeuDia.text.toString()
             val categoria = viewModel.categoriaSelecionadaString
@@ -135,11 +135,11 @@ class FormMeuDiaFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun preencherFormulario(meuDia: MeuDia) {
-        editTextLocalAddMeuDia.setText(meuDia.local!!.getClearText())
-        editTextNomeAddMeuDia.setText(meuDia.nome)
+        editTextMsgAddMeuDia.setText(meuDia.descricao!!.getClearText())
+        editTextTituloAddMeuDia.setText(meuDia.titulo)
         editTextDataAddMeuDia.setText(meuDia.data)
         editTextHoraAddMeuDia.setText(meuDia.hora)
-        spinnerCategoriaAddMeuDia.setSelection((spinnerCategoriaAddMeuDia.getAdapter() as? ArrayAdapter<String>)!!.getPosition(meuDia.categoria))
+        spinnerCategoriaAddMeuDia.setSelection((spinnerCategoriaAddMeuDia.getAdapter() as? ArrayAdapter<String>)!!.getPosition(meuDia.tipo))
 
         viewModel.receberFoto()
         viewModel.imagemTicket.observe(viewLifecycleOwner, Observer { foto ->

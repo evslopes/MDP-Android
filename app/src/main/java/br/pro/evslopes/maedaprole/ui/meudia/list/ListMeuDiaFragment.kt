@@ -14,7 +14,6 @@ import br.pro.evslopes.maedaprole.adapter.RecyclerListMeuDiaAdapter
 import br.pro.evslopes.maedaprole.data.MeuDiaDaoFirestore
 import br.pro.evslopes.maedaprole.data.ObjetoUtil
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.cadastro_fragment.*
 import kotlinx.android.synthetic.main.list_meudia_fragment.*
 
 class ListMeuDiaFragment : Fragment() {
@@ -46,7 +45,7 @@ class ListMeuDiaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        fabAddTicket.setOnClickListener {
+        fabAddMeuDia.setOnClickListener {
             ObjetoUtil.meuDiaSelecionado = null
             findNavController().navigate(R.id.formTicketFragment)
         }

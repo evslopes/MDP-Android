@@ -8,15 +8,15 @@
     tools:context=".ui.meudia.list.ListMeuDiaFragment" >
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddTicket"
+        android:id="@+id/fabAddMeuDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="40dp"
         android:clickable="true"
-        android:contentDescription="Adicionar um ticket"
+        android:contentDescription="@string/fabAddMeuDiaDescricao"
         android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="#029A08"
+        app:backgroundTint="#827717"
         app:fabCustomSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

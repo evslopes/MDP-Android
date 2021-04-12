@@ -33,7 +33,7 @@ class DetailsMeuDiaFragment : Fragment() {
         val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationApp)
         bottomNavigationView.visibility = View.GONE
 
-        viewModel.receberFoto()
+        viewModel.downloadFoto()
         viewModel.imagemPerfil.observe(viewLifecycleOwner, Observer {
             if(it != null) {
                 imageViewFotoMeuDiaDetails.setImageURI(it)
@@ -47,13 +47,13 @@ class DetailsMeuDiaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (verificarMeuDiaSelecionado())
-            preencherDetails(ObjetoUtil.meuDiaSelecionado!!)
+            detalhesMeuDia(ObjetoUtil.meuDiaSelecionado!!)
 
-        imageViewBackDetailsTicket.setOnClickListener {
+        imageViewBackDetailsMeuDia.setOnClickListener {
             findNavController().popBackStack()
         }
 
-        fabEditTicket.setOnClickListener {
+        fabEditMeuDia.setOnClickListener {
             findNavController().navigate(R.id.formTicketFragment)
         }
 
@@ -66,11 +66,11 @@ class DetailsMeuDiaFragment : Fragment() {
     fun verificarMeuDiaSelecionado() = ObjetoUtil.meuDiaSelecionado != null
 
     @RequiresApi(Build.VERSION_CODES.M)
-    private fun preencherDetails (meuDia: MeuDia){
-        textViewLocalDetail.setText(meuDia.local!!.getClearText())
+    private fun detalhesMeuDia (meuDia: MeuDia){
+        textViewLocalDetail.setText(meuDia.descricao!!.getClearText())
         textViewDataDetail.setText(meuDia.data)
         textViewHorarioDetail.setText(meuDia.hora)
-        textViewNomeDetail.setText(meuDia.nome)
-        textViewCategoriaDetail.setText(meuDia.categoria)
+        textViewNomeDetail.setText(meuDia.titulo)
+        textViewCategoriaDetail.setText(meuDia.tipo)
     }
 }

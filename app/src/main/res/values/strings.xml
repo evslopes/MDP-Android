@@ -1,12 +1,13 @@
 <resources>
+
+    <!-- Gerais -->
     <string name="app_name">Mãe da Prole</string>
     <string name="label_Doula">Doula</string>
     <string name="label_Gestante">Gestante</string>
     <string name="label_MeuDia">Dia</string>
     <string name="label_MinhaInspiracao">Inspiração</string>
     <string name="label_Perfil">Perfil</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -23,6 +24,80 @@
     <string name="textMinhaInspiracao">"O dia logo vai chegar! "</string>
     <string name="textviewDadosPerfil">Dados Do Perfil</string>
     <string name="Perfil_name">Elvis Lopes</string>
+
+    <!-- Tela de Cadastro Meu Dia -->
+    <string name="LabelTelaDeCadastro">App Mãe da Prole</string>
+    <string name="BtnCadastrar">Confirmar</string>
+    <string name="HintCadastroNome">Nome</string>
+    <string name="HintCadastroEmail">E-mail</string>
+    <string name="HintCadastroSenha">Senha</string>
+    <string name="HintCadastroConfirmarSenha">Confirmar Senha</string>
+    <string name="BtnvoltarCadastro">Voltar</string>
+
+    <!-- Tela de Detalhes Meu Dia -->
+    <string name="HintDetalheMeuDiaTitulo">Título</string>
+    <string name="LabelTituloDetalheMeudia">Título</string>
+    <string name="LabelCategoriaDetalhesMeuDia">Categoria</string>
+    <string name="HintCategoriaDetalhesMeuDia">Tipo</string>
+    <string name="LabelMensagemDetalhesMeuDia">Mensagem</string>
+    <string name="HintMensagemDetalhesMeuDia">Escreva aqui sua mensagem</string>
+    <string name="HintDataDetalhesMeuDia">Data</string>
+    <string name="LabelHorarioDetalhesMeuDia">Hora</string>
+    <string name="HintHorarioDetalhesMeuDia">Entre com o horário</string>
+    <string name="LabelEditarMeuDia">Editar Meu Dia</string>
+    <string name="LabelDeletarMeuDia">Deletar ticket</string>
+    <string name="textLabelDataDetail">Data</string>
+    <string name="BotaoVoltarDetalhesMeuDia">Voltar</string>
+
+    <!-- Tela de Login -->
+    <string name="textLabelLogin">Seja bem vindo!</string>
+    <string name="textLabelPergunta">Ainda não é cadastrado?</string>
+    <string name="btnLogin">Entrar</string>
+    <string name="textViewCadastro">Se Cadastre Agora</string>
+    <string name="HintEmailLogin">Email</string>
+    <string name="HintSenhaLogin">Senha</string>
+
+
+    <!-- Tela de DetailsUserFragment -->
+    <string name="LblCadastroSobrenome">Sobrenome</string>
+    <string name="DescricaofabEditUser">Editar usuário</string>
+    <string name="textLabelNomeDetailUser">Nome</string>
+    <string name="textViewNomeDetailUser">Seu nome aqui</string>
+    <string name="textLabelEmailDetailUser">E-mail</string>
+    <string name="textViewEmailDetailUser">Seu email@com</string>
+    <string name="textViewIsDoulaDetailUser">É Doula ou Gestante?</string>
+    <string name="textLabelQntdTicketsDetailUser">Perfil</string>
+    <string name="btnLogout">Sair</string>
+
+    <!-- Tela de FormMeuDiaFragment -->
+    <string name="imageViewBackFormTicketDescricao">Voltar</string>
+    <string name="imageViewAddMeuDiaImage">Imagem do momento do dia</string>
+    <string name="textLabelAddImage" />
+    <string name="fabSaveMeuDiaDescricao">"Salvar "</string>
+    <string name="textLabelCategoriaAddMeuDia">Tipo de evento</string>
+    <string name="editTextMsgAddMeuDia">Descrição</string>
+    <string name="editTextTituloAddMeuDia">Título</string>
+    <string name="editTextDataAddMeuDia">Data</string>
+    <string name="editTextHoraAddMeuDia">Horario</string>
+
+
+    <!-- Tela de UpdateUserFragment -->
+    <string name="fabSaveAtualizacaoUsuarioDescricao">Atualização</string>
+    <string name="imageViewBackUpdateUsuarioDesccricao">Voltar</string>
+    <string name="textLabelAtualizacaoUsuário">Atualização </string>
+    <string name="htineditTextNomeAtualizacaoUsuario">Nome</string>
+    <string name="editTextSobrenomeAtualizacaoUsuario">Sobrenome</string>
+
+
+    <!-- Tela de ListMeuDiaFragment -->
+    <string name="fabAddMeuDiaDescricao">Novo meu dia</string>
+
+
+    <!-- Tela de recycler_meudia -->
+    <string name="HintTituloMeuDia">Título meu dia</string>
+    <string name="HintDataMeuDia">Data da publicação</string>
+
+
     <string-array name="categorias_array">
         <item >Selecionar Categoria</item>
         <item>Cinema</item>

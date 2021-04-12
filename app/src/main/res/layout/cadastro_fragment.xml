@@ -13,7 +13,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Voltar"
+        android:contentDescription="@string/BtnvoltarCadastro"
         android:src="@drawable/abc_vector_test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,9 +24,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Cadastro"
+        android:text="@string/LabelTelaDeCadastro"
         android:textColor="#000000"
         android:textSize="30sp"
+        android:textColorHint="#827717"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +37,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Cadastrar"
+        android:text="@string/BtnCadastrar"
+        app:iconTint="#C0CA33"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutConfirmarSenhaCadastro" />
@@ -48,6 +50,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        android:textColorHint="#827717"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLabelCadastro">
@@ -56,7 +59,7 @@
             android:id="@+id/editTextNomeCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome"
+            android:hint="@string/HintCadastroNome"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,6 +70,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        android:textColorHint="#827717"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNomeCadastro">
@@ -75,7 +79,7 @@
             android:id="@+id/editTextSobrenomeCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Sobrenome"
+            android:hint="@string/LblCadastroSobrenome"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,6 +90,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        android:textColorHint="#827717"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSobrenomeCadastro">
@@ -94,7 +99,7 @@
             android:id="@+id/editTextEmailCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/HintCadastroEmail"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,6 +110,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        android:textColorHint="#827717"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmailCadastro">
@@ -113,7 +119,7 @@
             android:id="@+id/editTextSenhaCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha"
+            android:hint="@string/HintCadastroSenha"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,6 +130,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        android:textColorHint="#827717"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSenhaCadastro">
@@ -132,7 +139,7 @@
             android:id="@+id/editTextConfirmarSenhaCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirmar Senha"
+            android:hint="@string/HintCadastroConfirmarSenha"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 

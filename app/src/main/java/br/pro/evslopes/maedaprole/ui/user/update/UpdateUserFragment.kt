@@ -40,9 +40,9 @@ class UpdateUserFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        fabSaveUpdateUsuario.setOnClickListener {
-            var nome = editTextNomeUpdateUsuario.text.toString()
-            var sobrenome = editTextSobrenomeUpdateUsuario.text.toString()
+        fabSaveAtualizacaoUsuario.setOnClickListener {
+            var nome = editTextNomeAtualizacaoUsuario.text.toString()
+            var sobrenome = editTextSobrenomeAtualizacaoUsuario.text.toString()
 
             if(verificarNomeSobrenomeVazios(nome, sobrenome)) {
                 viewModel.updateUsuario(nome, sobrenome)

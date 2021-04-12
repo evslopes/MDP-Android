@@ -20,7 +20,7 @@ interface MeuDiaDao {
 
     fun edit(ticket: MeuDia): Task<Void>
 
-    fun cadastrarImagemPerfil(imagem: Bitmap, uid: String, nomeMeuDia: String): UploadTask
+    fun cadastrarImagemPerfil(imagem: Bitmap, uid: String, tituloMeuDia: String): UploadTask
 
-    fun receberImagem(uid: String, file: File, nomeMeuDia: String): FileDownloadTask
+    fun receberImagem(uid: String, file: File, tituloMeuDia: String): FileDownloadTask
 }

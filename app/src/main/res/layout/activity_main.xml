@@ -27,7 +27,7 @@
         android:id="@+id/bottomNavigationApp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#16A240"
+        android:background="#827717"
         app:itemIconSize="33dp"
         app:itemRippleColor="@color/black"
         app:itemTextColor="#FFFFFF"

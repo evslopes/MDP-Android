@@ -13,7 +13,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:contentDescription="Voltar"
+        android:contentDescription="@string/imageViewBackFormTicketDescricao"
         android:src="@drawable/abc_vector_test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,7 +25,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="72dp"
         android:background="#FFFFFF"
-        android:contentDescription="Tirar foto código de barras"
+        android:contentDescription="@string/imageViewAddMeuDiaImage"
         android:src="@android:drawable/ic_menu_camera"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -37,23 +37,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Clique acima para adicionar uma imagem."
+        android:text="@string/textLabelAddImage"
         android:textColor="@color/black"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewAddMeuDiaImage" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabSaveTicket"
+        android:id="@+id/fabSaveMeuDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="40dp"
         android:clickable="true"
-        android:contentDescription="Salvar ticket"
+        android:contentDescription="@string/fabSaveMeuDiaDescricao"
         android:src="@android:drawable/ic_menu_save"
-        app:backgroundTint="#029A08"
+        app:backgroundTint="#827717"
         app:fabCustomSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -68,22 +68,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelCategoriaAddTicket" />
+        app:layout_constraintTop_toBottomOf="@+id/textLabelCategoriaAddMeuDia" />
 
     <TextView
-        android:id="@+id/textLabelCategoriaAddTicket"
+        android:id="@+id/textLabelCategoriaAddMeuDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:text="Categoria"
+        android:text="@string/textLabelCategoriaAddMeuDia"
         android:textColor="#020202"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLocalAddTicket" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLocalAddMeuDia" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutLocalAddTicket"
+        android:id="@+id/textInputLayoutLocalAddMeuDia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -91,18 +91,18 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutNomeAddTicket">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTituloAddMeuDia">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextLocalAddMeuDia"
+            android:id="@+id/editTextMsgAddMeuDia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Local Ticket"
+            android:hint="@string/editTextMsgAddMeuDia"
             android:inputType="textPostalAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutNomeAddTicket"
+        android:id="@+id/textInputLayoutTituloAddMeuDia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -113,15 +113,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textLabelAddImage">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextNomeAddMeuDia"
+            android:id="@+id/editTextTituloAddMeuDia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome Ticket"
+            android:hint="@string/editTextTituloAddMeuDia"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutDataAddTicket"
+        android:id="@+id/textInputLayoutDataAddMeuDia"
         android:layout_width="139dp"
         android:layout_height="55dp"
         android:layout_marginStart="10dp"
@@ -133,7 +133,7 @@
             android:id="@+id/editTextDataAddMeuDia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Data"
+            android:hint="@string/editTextDataAddMeuDia"
             android:inputType="date"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -150,7 +150,7 @@
             android:id="@+id/editTextHoraAddMeuDia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Horario"
+            android:hint="@string/editTextHoraAddMeuDia"
             android:inputType="time"/>
     </com.google.android.material.textfield.TextInputLayout>
 

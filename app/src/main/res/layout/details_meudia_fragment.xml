@@ -7,28 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.meudia.details.DetailsMeuDiaFragment" >
 
-    <TextView
-        android:id="@+id/textViewCategoriaDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:hint="Categoria..."
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelCategoriaDetail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHorarioDetail" />
 
     <TextView
-        android:id="@+id/textLabelCategoriaDetail"
+        android:id="@+id/textLabelNomeDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Categoria -"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/LabelTituloDetalheMeudia"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelHorarioDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
 
     <TextView
         android:id="@+id/textViewNomeDetail"
@@ -36,22 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="30dp"
-        android:hint="Nome..."
+        android:hint="@string/HintDetalheMeuDiaTitulo"
+        android:textColorHint="#827717"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetail"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
-
-    <TextView
-        android:id="@+id/textLabelNomeDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:text="Nome Ticket - "
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
 
     <ImageView
@@ -62,7 +41,7 @@
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewBackDetailsTicket" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBackDetailsMeuDia" />
 
     <TextView
         android:id="@+id/textLabelLocalDetail"
@@ -70,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Local - "
+        android:text="@string/LabelMensagemDetalhesMeuDia"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:hint="Local..."
+        android:hint="@string/HintMensagemDetalhesMeuDia"
+        android:textColorHint="#827717"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textLabelLocalDetail"
@@ -94,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Data -"
+        android:text="@string/textLabelDataDetail"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +86,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:hint="Data..."
+        android:hint="@string/HintDataDetalhesMeuDia"
+        android:textColorHint="#827717"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textLabelDataDetail"
         app:layout_constraintTop_toBottomOf="@+id/textViewLocalDetail" />
@@ -117,7 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Horário -"
+        android:text="@string/LabelHorarioDetalhesMeuDia"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -129,26 +110,51 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
-        android:hint="Horário..."
+        android:hint="@string/HintHorarioDetalhesMeuDia"
+        android:textColorHint="#827717"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textLabelHorarioDetail"
         app:layout_constraintTop_toBottomOf="@+id/textViewDataDetail" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabEditTicket"
+        android:id="@+id/fabEditMeuDia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:clickable="true"
-        android:contentDescription="Editar ticket"
+        android:contentDescription="@string/LabelEditarMeuDia"
         android:src="@android:drawable/ic_menu_edit"
-        app:backgroundTint="#2196F3"
+        app:backgroundTint="#827717"
         app:fabCustomSize="50sp"
         app:fabSize="auto"
         app:layout_constraintBottom_toTopOf="@+id/fabDeleteTicket"
         app:layout_constraintEnd_toEndOf="parent"
-        app:rippleColor="#2196F3" />
+        app:rippleColor="#827717" />
+
+    <TextView
+        android:id="@+id/textViewCategoriaDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/HintCategoriaDetalhesMeuDia"
+        android:textColorHint="#827717"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelCategoriaDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHorarioDetail" />
+
+    <TextView
+        android:id="@+id/textLabelCategoriaDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/LabelCategoriaDetalhesMeuDia"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelHorarioDetail" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabDeleteTicket"
@@ -157,23 +163,23 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="40dp"
         android:clickable="true"
-        android:contentDescription="Deletar ticket"
+        android:contentDescription="@string/LabelDeletarMeuDia"
         android:src="@android:drawable/ic_menu_delete"
-        app:backgroundTint="#FF0000"
+        app:backgroundTint="#E53935"
         app:fabCustomSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageViewBackDetailsTicket"
+        android:id="@+id/imageViewBackDetailsMeuDia"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
-        android:contentDescription="Voltar"
+        android:contentDescription="@string/BotaoVoltarDetalhesMeuDia"
         android:src="@drawable/abc_vector_test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/black" />
+        app:tint="@color/black_overlay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
