@@ -5,7 +5,7 @@
     android:id="@+id/detailsTicketFrameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.meudia.details.DetailsMeuDiaFragment" >
+    tools:context=".ui.meudia.details.DetailsMinhaInspiracaoFragment" >
 
 
     <TextView

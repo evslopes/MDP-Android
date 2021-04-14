@@ -9,13 +9,13 @@ import br.pro.evslopes.maedaprole.data.UserFirebaseDao
 import br.pro.evslopes.maedaprole.model.MeuDia
 import br.pro.evslopes.maedaprole.model.User
 
-class DetailsUserViewModel(private val ticketDao: MeuDiaDao) : ViewModel() {
+class DetailsUserViewModel(private val meuDiaDao: MeuDiaDao) : ViewModel() {
     private val _usuario = MutableLiveData<User?>()
     val usuario: LiveData<User?> = _usuario
     private var _meusDias = listOf<MeuDia>()
 
     init{
-        ticketDao.all().addSnapshotListener { value, error ->
+        meuDiaDao.all().addSnapshotListener { value, error ->
             if (error != null) {
                 Log.i("FirebaseFirestore", "${error.message}")
             } else {

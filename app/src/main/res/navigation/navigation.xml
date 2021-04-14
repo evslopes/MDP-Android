@@ -18,17 +18,17 @@
     <fragment
         android:id="@+id/listMeuDiaFragment"
         android:name="br.pro.evslopes.maedaprole.ui.meudia.list.ListMeuDiaFragment"
-        android:label="list_tickets_fragment"
+        android:label="list_meudia_fragment"
         tools:layout="@layout/list_meudia_fragment" />
     <fragment
-        android:id="@+id/detailsTicketFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.details.DetailsMeuDiaFragment"
-        android:label="details_ticket_fragment"
+        android:id="@+id/detailsMeuDiaFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.details.DetailsMinhaInspiracaoFragment"
+        android:label="details_MeuDia_fragment"
         tools:layout="@layout/details_meudia_fragment" />
     <fragment
-        android:id="@+id/formTicketFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.form.FormMeuDiaFragment"
-        android:label="form_ticket_fragment"
+        android:id="@+id/formMeuDiaFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.form.FormMinhaInspiracaoFragment"
+        android:label="form_MeuDia_fragment"
         tools:layout="@layout/form_meudia_fragment" />
     <fragment
         android:id="@+id/detailsUserFragment"
@@ -40,4 +40,16 @@
         android:name="br.pro.evslopes.maedaprole.ui.user.update.UpdateUserFragment"
         android:label="form_user_fragment"
         tools:layout="@layout/form_user_fragment" />
+    <fragment
+        android:id="@+id/listMeuDiaFragment2"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.list.ListMeuDiaFragment"
+        android:label="ListMeuDiaFragment" />
+    <fragment
+        android:id="@+id/formMeuDiaFragment2"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.form.FormMeuDiaFragment"
+        android:label="FormMeuDiaFragment" />
+    <fragment
+        android:id="@+id/detailsMeuDiaFragment2"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.details.DetailsMeuDiaFragment"
+        android:label="DetailsMeuDiaFragment" />
 </navigation>

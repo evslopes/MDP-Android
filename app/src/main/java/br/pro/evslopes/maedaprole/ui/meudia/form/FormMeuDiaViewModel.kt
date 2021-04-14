@@ -45,9 +45,9 @@ class FormMeuDiaViewModel(application: Application, private val meuDiaDao: MeuDi
 
         val meuDia = MeuDia(titulo, descricao, data, hora, tipo)
 
-        if(ObjetoUtil.meuDiaSelecionado != null) {
-            meuDia.id = ObjetoUtil.meuDiaSelecionado!!.id
-            meuDia.userId = ObjetoUtil.meuDiaSelecionado!!.userId
+        if(ObjetoUtil.Selecionado != null) {
+            meuDia.id = ObjetoUtil.Selecionado!!.id
+            meuDia.userId = ObjetoUtil.Selecionado!!.userId
             if(fotoPerfil != null) {
                 meuDiaDao.cadastrarImagemPerfil(fotoPerfil!!, UserFirebaseDao.firebaseAuth.currentUser.uid, meuDia.titulo!!.trim())
                     .addOnSuccessListener {
@@ -88,8 +88,8 @@ class FormMeuDiaViewModel(application: Application, private val meuDiaDao: MeuDi
     fun downloadFoto() {
         val file = File(app.cacheDir, "${Random.nextInt(0, Int.MAX_VALUE)}.jpeg")
         val usuarioId = UserFirebaseDao.firebaseAuth.currentUser.uid
-        if(ObjetoUtil.meuDiaSelecionado!!.titulo != null) {
-            meuDiaDao.receberImagem(usuarioId, file, ObjetoUtil.meuDiaSelecionado!!.titulo!!)
+        if(ObjetoUtil.Selecionado!!.titulo != null) {
+            meuDiaDao.receberImagem(usuarioId, file, ObjetoUtil.Selecionado!!.titulo!!)
                     .addOnSuccessListener {
                         _imagemMeuDia.value = file.toUri()
                         val bitmap = BitmapFactory.decodeFile(file.path)

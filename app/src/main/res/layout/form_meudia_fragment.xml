@@ -5,7 +5,7 @@
     android:id="@+id/formTicketFrameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.meudia.form.FormMeuDiaFragment" >
+    tools:context=".ui.meudia.form.FormMinhaInspiracaoFragment" >
 
     <ImageView
         android:id="@+id/imageViewBackFormTicket"

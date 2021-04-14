@@ -22,8 +22,8 @@ class DetailsMeuDiaViewModel(application: Application, private val meuDiaDao: Me
     fun downloadImagem() {
         val file = File(app.cacheDir, "${Random.nextInt(0, Int.MAX_VALUE)}.jpeg")
         val usuarioId = UserFirebaseDao.firebaseAuth.currentUser.uid
-        if(ObjetoUtil.meuDiaSelecionado!!.titulo != null) {
-            meuDiaDao.receberImagem(usuarioId, file, ObjetoUtil.meuDiaSelecionado!!.titulo!!)
+        if(ObjetoUtil.Selecionado!!.titulo != null) {
+            meuDiaDao.receberImagem(usuarioId, file, ObjetoUtil.Selecionado!!.titulo!!)
                 .addOnSuccessListener {
                     _imagemPerfil.value = file.toUri()
                 }

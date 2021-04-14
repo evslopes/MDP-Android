@@ -29,8 +29,8 @@ class ListMeuDiaFragment : Fragment() {
         viewModel = ViewModelProvider(this, listMeuDiaViewModelFactory).get(ListMeuDiaViewModel::class.java)
         viewModel.meuDia.observe(viewLifecycleOwner, Observer {
             recyclerlistMeuDia.adapter = RecyclerListMeuDiaAdapter(it) {
-                ObjetoUtil.meuDiaSelecionado = it
-                findNavController().navigate(R.id.detailsTicketFragment)
+                ObjetoUtil.Selecionado = it
+                findNavController().navigate(R.id.detailsMeuDiaFragment)
             }
             recyclerlistMeuDia.layoutManager = LinearLayoutManager(requireContext())
         })
@@ -46,8 +46,8 @@ class ListMeuDiaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         fabAddMeuDia.setOnClickListener {
-            ObjetoUtil.meuDiaSelecionado = null
-            findNavController().navigate(R.id.formTicketFragment)
+            ObjetoUtil.Selecionado = null
+            findNavController().navigate(R.id.formMeuDiaFragment)
         }
     }
 }

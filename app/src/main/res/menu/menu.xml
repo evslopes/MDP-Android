@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/listMinhaInspiracaoFragment"
+        android:icon="@android:drawable/ic_input_get"
+        android:title="MinhaInspiracao" />
+    <item
         android:id="@+id/listMeuDiaFragment"
         android:icon="@android:drawable/ic_input_get"
         android:title="MeuDia" />

@@ -10,10 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import br.pro.evslopes.maedaprole.R
 import br.pro.evslopes.maedaprole.enums.Tipos
 import br.pro.evslopes.maedaprole.model.MeuDia
+import br.pro.evslopes.maedaprole.model.MinhaInspiracao
 
 
 class RecyclerListMeuDiaAdapter(
-    private val meuDia: List<MeuDia>,
+    private val meuDia: MutableList<MeuDia>,
     val actionClick: (MeuDia) -> Unit
 ) : RecyclerView.Adapter<RecyclerListMeuDiaAdapter.MeuDiaViewHolder>() {
 

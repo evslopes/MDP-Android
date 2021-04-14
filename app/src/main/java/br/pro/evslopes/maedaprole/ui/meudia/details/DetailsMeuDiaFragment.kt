@@ -26,9 +26,9 @@ class DetailsMeuDiaFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.details_meudia_fragment, container, false)
 
-        val detailsTicketViewModelFactory = DetailsMeuDiaViewModelFactory(requireActivity().application, MeuDiaDaoFirestore())
+        val detailsMeuDiaViewModelFactory = DetailsMeuDiaViewModelFactory(requireActivity().application, MeuDiaDaoFirestore())
 
-        viewModel = ViewModelProvider(this, detailsTicketViewModelFactory).get(DetailsMeuDiaViewModel::class.java)
+        viewModel = ViewModelProvider(this, detailsMeuDiaViewModelFactory).get(DetailsMeuDiaViewModel::class.java)
 
         val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationApp)
         bottomNavigationView.visibility = View.GONE
@@ -47,23 +47,23 @@ class DetailsMeuDiaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (verificarMeuDiaSelecionado())
-            detalhesMeuDia(ObjetoUtil.meuDiaSelecionado!!)
+            detalhesMeuDia(ObjetoUtil.Selecionado!!)
 
         imageViewBackDetailsMeuDia.setOnClickListener {
             findNavController().popBackStack()
         }
 
         fabEditMeuDia.setOnClickListener {
-            findNavController().navigate(R.id.formTicketFragment)
+            findNavController().navigate(R.id.formMeuDiaFragment)
         }
 
         fabDeleteTicket.setOnClickListener {
-            MeuDiaDaoFirestore().delete(ObjetoUtil.meuDiaSelecionado!!)
+            MeuDiaDaoFirestore().delete(ObjetoUtil.Selecionado!!)
             findNavController().popBackStack()
         }
     }
 
-    fun verificarMeuDiaSelecionado() = ObjetoUtil.meuDiaSelecionado != null
+    fun verificarMeuDiaSelecionado() = ObjetoUtil.Selecionado != null
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun detalhesMeuDia (meuDia: MeuDia){
