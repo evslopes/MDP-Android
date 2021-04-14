@@ -25,7 +25,7 @@ class RecyclerListMinhaInspiracaoAdapter (
 
     override fun onBindViewHolder(holder: MinhaInspiracaoViewHolder, position: Int) {
         val news = minhaInspiracao[position]
-        holder.textViewListMinhaInspiracaoAssunto.text = news.source
+        holder.textViewListMinhaInspiracaoAssunto.text = news.snippet
         holder.textViewListMinhaInspiracaoConteudo.text = news.headline?.main
     }
 

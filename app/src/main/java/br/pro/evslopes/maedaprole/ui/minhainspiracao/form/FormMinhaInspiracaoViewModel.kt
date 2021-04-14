@@ -1,4 +1,4 @@
-package br.pro.evslopes.maedaprole.ui.meudia.form
+package br.pro.evslopes.maedaprole.ui.minhainspiracao.form
 
 import android.app.Application
 import android.graphics.Bitmap

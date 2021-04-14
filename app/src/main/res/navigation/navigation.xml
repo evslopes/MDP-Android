@@ -22,12 +22,12 @@
         tools:layout="@layout/list_meudia_fragment" />
     <fragment
         android:id="@+id/detailsMeuDiaFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.details.DetailsMinhaInspiracaoFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.details.DetailsMeuDiaFragment"
         android:label="details_MeuDia_fragment"
         tools:layout="@layout/details_meudia_fragment" />
     <fragment
         android:id="@+id/formMeuDiaFragment"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.form.FormMinhaInspiracaoFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.meudia.form.FormMeuDiaFragment"
         android:label="form_MeuDia_fragment"
         tools:layout="@layout/form_meudia_fragment" />
     <fragment
@@ -41,15 +41,15 @@
         android:label="form_user_fragment"
         tools:layout="@layout/form_user_fragment" />
     <fragment
-        android:id="@+id/listMeuDiaFragment2"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.list.ListMeuDiaFragment"
+        android:id="@+id/listMinhaInspiracaoFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.minhainspiracao.list.ListMinhaInspiracaoFragment"
         android:label="ListMeuDiaFragment" />
     <fragment
-        android:id="@+id/formMeuDiaFragment2"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.form.FormMeuDiaFragment"
+        android:id="@+id/formMinhaInspiracaoFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.minhainspiracao.form.FormMinhaInspiracaoFragment"
         android:label="FormMeuDiaFragment" />
     <fragment
-        android:id="@+id/detailsMeuDiaFragment2"
-        android:name="br.pro.evslopes.maedaprole.ui.meudia.details.DetailsMeuDiaFragment"
+        android:id="@+id/detailsMinhaInspiracaoFragment"
+        android:name="br.pro.evslopes.maedaprole.ui.minhainspiracao.details.DetailsMinhaInspiracaoFragment"
         android:label="DetailsMeuDiaFragment" />
 </navigation>

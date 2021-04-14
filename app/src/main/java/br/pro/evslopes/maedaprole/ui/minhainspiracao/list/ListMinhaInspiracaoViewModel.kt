@@ -1,25 +1,34 @@
-package br.pro.evslopes.maedaprole.ui.meudia.list
+package br.pro.evslopes.maedaprole.ui.minhainspiracao.list
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import br.pro.evslopes.maedaprole.data.MeuDiaDao
-import br.pro.evslopes.maedaprole.data.MinhaInspiracaoDao
+import androidx.lifecycle.viewModelScope
+import br.pro.evslopes.maedaprole.api.Api
 import br.pro.evslopes.maedaprole.model.MinhaInspiracao
+import kotlinx.coroutines.launch
 
-class ListMinhaInspiracaoViewModel(private val minhaInspiracaoDao: MinhaInspiracaoDao) : ViewModel() {
-    private val _minhaInspiracao = MutableLiveData<MutableList<MinhaInspiracao>>()
-    val minhaInspiracao: MutableLiveData<MutableList<MinhaInspiracao>> = _minhaInspiracao
+class ListMinhaInspiracaoViewModel() : ViewModel() {
+    private val _news = MutableLiveData<List<MinhaInspiracao>>()
+    val news: LiveData<List<MinhaInspiracao>> = _news
 
-    fun attListMinhaInspiracao () {
-        minhaInspiracaoDao.all().addSnapshotListener { value, error ->
-            if (error != null) {
-                Log.i("FirebaseFirestore", "${error.message}")
-            } else {
-                if (value != null && !value.isEmpty) {
-                    _minhaInspiracao.value = value.toObjects(MinhaInspiracao::class.java)
-                }
+    private val _msg = MutableLiveData<String>()
+    val msg: LiveData<String> = _msg
+
+    init {
+        viewModelScope.launch {
+            try {
+                val responseTypes =
+                    Api
+                        .getNewsService().all()
+                val response = responseTypes.response
+                _news.value = response!!.docs!!
+            }catch (e: Exception){
+                _msg.value = e.message
+                Log.i("LCVWResponse", "${e.message}")
             }
+
         }
     }
 }

@@ -26,7 +26,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.form_meudia_fragment.*
 
 class FormMeuDiaFragment : Fragment() {
-    private lateinit var viewModel: FormMinhaInspiracaoViewModel
+    private lateinit var viewModel: FormMeuDiaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,9 +37,9 @@ class FormMeuDiaFragment : Fragment() {
         val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationApp)
         bottomNavigationView.visibility = View.GONE
 
-        val formTicketViewModelFactory = FormMinhaInspiracaoViewModelFactory(requireActivity().application, MeuDiaDaoFirestore())
+        val formTicketViewModelFactory = FormMeuDiaViewModelFactory(requireActivity().application, MeuDiaDaoFirestore())
 
-        viewModel = ViewModelProvider(this, formTicketViewModelFactory).get(FormMinhaInspiracaoViewModel::class.java)
+        viewModel = ViewModelProvider(this, formTicketViewModelFactory).get(FormMeuDiaViewModel::class.java)
 
         viewModel.let {
             it.message.observe(viewLifecycleOwner, Observer { message ->

@@ -1,4 +1,4 @@
-package br.pro.evslopes.maedaprole.ui.meudia.details
+package br.pro.evslopes.maedaprole.ui.minhainspiracao.details
 
 import android.os.Build
 import android.os.Bundle

@@ -7,8 +7,8 @@ import br.pro.evslopes.maedaprole.data.MeuDiaDao
 
 class FormMeuDiaViewModelFactory(val application: Application, val meuDiaDao: MeuDiaDao): ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(FormMinhaInspiracaoViewModel::class.java)){
-            return FormMinhaInspiracaoViewModel(application, meuDiaDao) as T
+        if (modelClass.isAssignableFrom(FormMeuDiaViewModel::class.java)){
+            return FormMeuDiaViewModel(application, meuDiaDao) as T
         }
         throw IllegalArgumentException("Erro Classe ViewModel FormMeudia.")
     }
