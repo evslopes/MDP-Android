@@ -10,9 +10,13 @@ Projeto desenvolvido por **Elvis Lopes** junto a **Mãe da Prole** e **Professor
 
 O app traz em si um proposta para unir gestantes e doulas formando uma comunidade de interação mutua e continua.
 
-## Dia da Gestante
+## Meu dia
 
-Conteúdo com informações acerca da gestação, demonstrando tempo linear, com data inicial, quantidade de dias e dia previsto para o parto
+Conteúdo com informações que a gestante deseja guardar durante seu dia
+
+## Minha inspiração
+
+Conteúdo informativos para a gestante se inspirar durante seu dia
 
 ## Considerações
 
