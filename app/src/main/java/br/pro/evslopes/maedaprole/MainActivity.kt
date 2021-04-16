@@ -1,7 +1,14 @@
 package br.pro.evslopes.maedaprole
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.Network
+import android.net.NetworkCapabilities
+import android.net.NetworkInfo
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
@@ -21,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationApp)
         bottomNavigationView.visibility = View.GONE
 
+        //Implementando AdMob Propaganda
         MobileAds.initialize(this)
 
         val mAdView = this.findViewById<AdView>(R.id.adView)

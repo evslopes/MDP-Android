@@ -3,14 +3,15 @@
 
     <item
         android:id="@+id/listMinhaInspiracaoFragment"
-        android:icon="@android:drawable/ic_input_get"
-        android:title="MinhaInspiracao" />
+        android:icon="@drawable/meubebe"
+        android:title="Inspiracao" />
     <item
         android:id="@+id/listMeuDiaFragment"
-        android:icon="@android:drawable/ic_input_get"
+        android:icon="@drawable/recordacao"
         android:title="MeuDia" />
     <item
         android:id="@+id/detailsUserFragment"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/gestacao"
         android:title="Perfil" />
+
 </menu>

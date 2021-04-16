@@ -20,29 +20,28 @@
 
     <TextView
         android:id="@+id/txtNomeMeuDia"
-        android:layout_width="303dp"
-        android:layout_height="29dp"
+        android:layout_width="325dp"
+        android:layout_height="41dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="@string/HintTituloMeuDia"
         android:textColor="#827717"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imgCategoriaMeuDia"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtDataMeuDia"
-        android:layout_width="171dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:hint="@string/HintDataMeuDia"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toEndOf="@+id/imgCategoriaMeuDia"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeMeuDia"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeMeuDia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

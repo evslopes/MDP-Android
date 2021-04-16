@@ -5,14 +5,14 @@
     android:id="@+id/detailsTicketFrameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.meudia.details.DetailsMinhaInspiracaoFragment" >
+    tools:context=".ui.meudia.details.DetailsMeuDiaFragment" >
 
 
     <TextView
         android:id="@+id/textLabelNomeDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:text="@string/LabelTituloDetalheMeudia"
         android:textColor="#000000"
@@ -24,11 +24,11 @@
         android:id="@+id/textViewNomeDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
         android:hint="@string/HintDetalheMeuDiaTitulo"
-        android:textColorHint="#827717"
         android:textColor="#000000"
+        android:textColorHint="#827717"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetail"
         app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />

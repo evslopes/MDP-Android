@@ -34,7 +34,7 @@ class ListMeuDiaFragment : Fragment() {
             }
             recyclerlistMeuDia.layoutManager = LinearLayoutManager(requireContext())
         })
-        viewModel.attListTickets()
+        viewModel.attListMeudia()
 
         val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.bottomNavigationApp)
         bottomNavigationView.visibility = View.VISIBLE

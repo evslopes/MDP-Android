@@ -11,7 +11,7 @@ class ListMeuDiaViewModel(private val meuDiaDao: MeuDiaDao) : ViewModel() {
     private val _meuDia = MutableLiveData<MutableList<MeuDia>>()
     val meuDia: LiveData<MutableList<MeuDia>> = _meuDia
 
-    fun attListTickets () {
+    fun attListMeudia () {
         meuDiaDao.all().addSnapshotListener { value, error ->
             if (error != null) {
                 Log.i("FirebaseFirestore", "${error.message}")

@@ -108,6 +108,7 @@ class FormMinhaInspiracaoFragment : Fragment() {
         }
 
         imageViewAddMeuDiaImage.setOnClickListener {
+
             tirarFoto()
         }
     }
@@ -120,6 +121,7 @@ class FormMinhaInspiracaoFragment : Fragment() {
         categoria == "Selecionar Categoria"
 
     private fun tirarFoto() {
+
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         startActivityForResult(intent, 200)
     }

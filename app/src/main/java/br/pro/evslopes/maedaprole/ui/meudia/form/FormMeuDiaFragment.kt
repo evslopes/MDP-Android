@@ -1,7 +1,9 @@
 package br.pro.evslopes.maedaprole.ui.meudia.form
 
+import android.Manifest
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
@@ -26,6 +28,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.form_meudia_fragment.*
 
 class FormMeuDiaFragment : Fragment() {
+    val CAMERA_REQUEST = 1234
+    val CAMERA_PERMISSION_CODE = 4321
     private lateinit var viewModel: FormMeuDiaViewModel
 
     override fun onCreateView(
@@ -108,7 +112,11 @@ class FormMeuDiaFragment : Fragment() {
         }
 
         imageViewAddMeuDiaImage.setOnClickListener {
-            tirarFoto()
+            if(requireContext().checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_CODE)
+            } else {
+                tirarFoto()
+            }
         }
     }
 
@@ -126,11 +134,13 @@ class FormMeuDiaFragment : Fragment() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
         if(resultCode == Activity.RESULT_OK) {
             var imageBitmap = data!!.extras!!.get("data") as Bitmap
             imageViewAddMeuDiaImage.setImageBitmap(imageBitmap)
             viewModel.alterarImagemPerfil(imageBitmap)
         }
+
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -151,5 +161,20 @@ class FormMeuDiaFragment : Fragment() {
 
     private fun makeToast(msg: String) {
         Toast.makeText(requireContext(), msg, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if(requestCode == CAMERA_PERMISSION_CODE) {
+
+            if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                startActivityForResult(cameraIntent, CAMERA_REQUEST)
+            } else {
+
+                Toast.makeText(requireContext(), "Permissão Negada ao Acesso à Câmera", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }
