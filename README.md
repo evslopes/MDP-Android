@@ -6,7 +6,7 @@ Projeto desenvolvido por **Elvis Lopes** junto a **Mãe da Prole** e **Professor
 
 **Pensado para ajudar a mãe da Prole como Doula a se conectar com suas gestantes e facilitar seu dia-a-dia, ao qual une de uma forma simples o acompanhamento da de gestantes em sua gestação tocando na evolução biológica, emocional e espiritual.**
 
-<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/TelaInicial.jpg" alt="Tela de login" title="Tela de Login" />
+<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/TelaInicial.jpg?w=512" height="800" width="480" alt="Tela de login" title="Tela de Login"/>
 
 
 ## Comunidade
@@ -17,15 +17,15 @@ O app traz em si um proposta para unir gestantes e doulas formando uma comunidad
 
 Conteúdo com informações que a gestante deseja guardar durante seu dia
 
-<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/MeuDia.jpg" alt="Meu Dia" title="Tela Inical" />
+<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/MeuDia.jpg?w=512" height="800" width="480" alt="Meu Dia" title="Tela Inical" />
 
-<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/DetralhesMeuDia.jpg" alt="Tela de Detalhes" title="Tela Detalhes" />
+<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/DetralhesMeuDia.jpg?w=512" height="800" width="480" alt="Tela de Detalhes" title="Tela Detalhes" />
 
 ## Minha inspiração
 
 Conteúdo informativos para a gestante se inspirar durante seu dia
 
-<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/MinhaInspiracao.jpg" alt="Tela minha inspiração" title="Tela Minha Inspiração" />
+<img src="https://github.com/evslopes/ProjetoDeBloco-MaeDaProle/blob/AT_DKA/MinhaInspiracao.jpg?w=512" height="800" width="480" alt="Tela minha inspiração" title="Tela Minha Inspiração" />
 
 ## Considerações
 
