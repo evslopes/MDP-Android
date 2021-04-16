@@ -7,31 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.meudia.details.DetailsMeuDiaFragment" >
 
-
-    <TextView
-        android:id="@+id/textLabelNomeDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/imageViewBackDetailsMeuDia"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/LabelTituloDetalheMeudia"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/BotaoVoltarDetalhesMeuDia"
+        android:src="@drawable/abc_vector_test"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
-
-    <TextView
-        android:id="@+id/textViewNomeDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
-        android:hint="@string/HintDetalheMeuDiaTitulo"
-        android:textColor="#000000"
-        android:textColorHint="#827717"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetail"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black_overlay" />
 
     <ImageView
         android:id="@+id/imageViewFotoMeuDiaDetails"
@@ -44,59 +30,90 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewBackDetailsMeuDia" />
 
     <TextView
-        android:id="@+id/textLabelLocalDetail"
+        android:id="@+id/textLabelTituloDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/LabelTituloDetalheMeudia"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
+
+    <TextView
+        android:id="@+id/textViewTituloDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:hint="@string/HintDetalheMeuDiaTitulo"
+        android:textColor="#827717"
+        android:textColorHint="#827717"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textLabelTituloDetail"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFotoMeuDiaDetails" />
+
+
+
+    <TextView
+        android:id="@+id/textLabelDescricaoDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:text="@string/LabelMensagemDetalhesMeuDia"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelNomeDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/textLabelTituloDetail" />
 
     <TextView
-        android:id="@+id/textViewLocalDetail"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewDescricaolDetail"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:hint="@string/HintMensagemDetalhesMeuDia"
+        android:textColor="#827717"
         android:textColorHint="#827717"
-        android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelLocalDetail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNomeDetail" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textLabelDescricaoDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTituloDetail" />
 
     <TextView
         android:id="@+id/textLabelDataDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:text="@string/textLabelDataDetail"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelLocalDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/textLabelDescricaoDetail" />
 
     <TextView
         android:id="@+id/textViewDataDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:hint="@string/HintDataDetalhesMeuDia"
+        android:textColor="#827717"
         android:textColorHint="#827717"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textLabelDataDetail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLocalDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescricaolDetail" />
 
     <TextView
         android:id="@+id/textLabelHorarioDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:text="@string/LabelHorarioDetalhesMeuDia"
         android:textColor="#000000"
@@ -108,13 +125,39 @@
         android:id="@+id/textViewHorarioDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:hint="@string/HintHorarioDetalhesMeuDia"
         android:textColorHint="#827717"
+        android:textColor="#827717"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textLabelHorarioDetail"
         app:layout_constraintTop_toBottomOf="@+id/textViewDataDetail" />
+
+    <TextView
+        android:id="@+id/textViewTipoDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/HintCategoriaDetalhesMeuDia"
+        android:textColorHint="#827717"
+        android:textColor="#827717"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textLabelCategoriaDetail"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHorarioDetail" />
+
+    <TextView
+        android:id="@+id/textLabelCategoriaDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/LabelCategoriaDetalhesMeuDia"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelHorarioDetail" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabEditMeuDia"
@@ -132,29 +175,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="#827717" />
 
-    <TextView
-        android:id="@+id/textViewCategoriaDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:hint="@string/HintCategoriaDetalhesMeuDia"
-        android:textColorHint="#827717"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelCategoriaDetail"
-        app:layout_constraintTop_toBottomOf="@+id/textViewHorarioDetail" />
 
-    <TextView
-        android:id="@+id/textLabelCategoriaDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/LabelCategoriaDetalhesMeuDia"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelHorarioDetail" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabDeleteTicket"
@@ -169,17 +190,5 @@
         app:fabCustomSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewBackDetailsMeuDia"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="16dp"
-        android:contentDescription="@string/BotaoVoltarDetalhesMeuDia"
-        android:src="@drawable/abc_vector_test"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/black_overlay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

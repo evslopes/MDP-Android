@@ -89,7 +89,7 @@ class FormMeuDiaFragment : Fragment() {
             preencherFormulario(ObjetoUtil.Selecionado!!)
         }
 
-        imageViewBackFormTicket.setOnClickListener {
+        imageViewBackFormMeuDia.setOnClickListener {
             findNavController().popBackStack()
         }
 

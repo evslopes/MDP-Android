@@ -38,7 +38,7 @@
     <string name="HintDetalheMeuDiaTitulo">Título</string>
     <string name="LabelTituloDetalheMeudia">Título</string>
     <string name="LabelCategoriaDetalhesMeuDia">Categoria</string>
-    <string name="HintCategoriaDetalhesMeuDia">Tipo</string>
+    <string name="HintCategoriaDetalhesMeuDia">Escolha o tipo </string>
     <string name="LabelMensagemDetalhesMeuDia">Mensagem</string>
     <string name="HintMensagemDetalhesMeuDia">Escreva aqui sua mensagem</string>
     <string name="HintDataDetalhesMeuDia">Data</string>
@@ -100,6 +100,10 @@
 
     <string name="facebook_app_id">1170658833411003</string>
     <string name="fb_login_protocol_scheme">fb1170658833411003</string>
+    <string name="txtMeuDiaHora">Hora</string>
+    <string name="textViewListMinhaInspiracaoAssunto">Assunto NYT</string>
+    <string name="textViewListMinhaInspiracaoConteudo">Titulo NYT</string>
+    <string name="textLabelDados">Meus Dados</string>
 
 
     <string-array name="categorias_array">

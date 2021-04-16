@@ -7,6 +7,133 @@
     android:layout_height="match_parent"
     tools:context=".ui.user.details.DetailsUserFragment" >
 
+    <TextView
+        android:id="@+id/textLabelDados"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/textLabelDados"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textLabelNomeDetailUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/textLabelNomeDetailUser"
+        android:textColor="#000000"
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelDados" />
+
+    <TextView
+        android:id="@+id/textViewNomeDetailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:hint="@string/textViewNomeDetailUser"
+        android:textSize="20sp"
+        android:textColorHint="#827717"
+        android:textColor="#827717"
+        app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetailUser"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelDados" />
+
+
+    <TextView
+        android:id="@+id/textLabelSobrenomeDetailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Sobrenome -"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelNomeDetailUser" />
+
+    <TextView
+        android:id="@+id/textViewSobrenomeDetailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="Sobrenome..."
+        android:textSize="20sp"
+        android:textColorHint="#827717"
+        android:textColor="#827717"
+        app:layout_constraintStart_toEndOf="@+id/textLabelSobrenomeDetailUser"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeDetailUser" />
+
+
+    <TextView
+        android:id="@+id/textLabelEmailDetailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/textLabelEmailDetailUser"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelSobrenomeDetailUser" />
+
+    <TextView
+        android:id="@+id/textViewEmailDetailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/textViewEmailDetailUser"
+        android:textSize="20sp"
+        android:textColorHint="#827717"
+        android:textColor="#827717"
+        app:layout_constraintStart_toEndOf="@+id/textLabelEmailDetailUser"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSobrenomeDetailUser" />
+
+
+    <TextView
+        android:id="@+id/textViewIsDoulaDetailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:hint="@string/textViewIsDoulaDetailUser"
+        android:textSize="20sp"
+        android:textColorHint="#827717"
+        android:textColor="#827717"
+        app:layout_constraintStart_toEndOf="@+id/textLabelEhDoulaDetailUser"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEmailDetailUser" />
+
+    <TextView
+        android:id="@+id/textLabelEhDoulaDetailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/textLabelQntdTicketsDetailUser"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelEmailDetailUser" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/btnLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIsDoulaDetailUser" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabEditUser"
         android:layout_width="wrap_content"
@@ -22,113 +149,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="#827717" />
-
-    <TextView
-        android:id="@+id/textLabelNomeDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
-        android:text="@string/textLabelNomeDetailUser"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewNomeDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="80dp"
-        android:hint="@string/textViewNomeDetailUser"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelNomeDetailUser"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/textLabelSobrenomeDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Sobrenome -"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelNomeDetailUser" />
-
-    <TextView
-        android:id="@+id/textViewSobrenomeDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:hint="Sobrenome..."
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelSobrenomeDetailUser"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNomeDetailUser" />
-
-
-    <TextView
-        android:id="@+id/textLabelEmailDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/textLabelEmailDetailUser"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelSobrenomeDetailUser" />
-
-    <TextView
-        android:id="@+id/textViewEmailDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:hint="@string/textViewEmailDetailUser"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelEmailDetailUser"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSobrenomeDetailUser" />
-
-
-
-    <TextView
-        android:id="@+id/textViewIsDoulaDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:hint="@string/textViewIsDoulaDetailUser"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/textLabelQntdTicketsDetailUser"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmailDetailUser" />
-
-    <TextView
-        android:id="@+id/textLabelQntdTicketsDetailUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/textLabelQntdTicketsDetailUser"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelEmailDetailUser" />
-
-
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="@string/btnLogout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewIsDoulaDetailUser" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

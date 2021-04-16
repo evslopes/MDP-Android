@@ -18,7 +18,7 @@
     </ScrollView>
 
     <ImageView
-        android:id="@+id/imageViewBackFormTicket"
+        android:id="@+id/imageViewBackFormMeuDia"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="10dp"
@@ -70,49 +70,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutHoraAddTicket" />
 
-    <Spinner
-        android:id="@+id/tipoMeuDia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textLabelCategoriaAddMeuDia" />
-
-    <TextView
-        android:id="@+id/textLabelCategoriaAddMeuDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/textLabelCategoriaAddMeuDia"
-        android:textColor="#020202"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLocalAddMeuDia" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutLocalAddMeuDia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTituloAddMeuDia">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextMsgAddMeuDia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/editTextMsgAddMeuDia"
-            android:inputType="textPostalAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutTituloAddMeuDia"
         android:layout_width="match_parent"
@@ -131,6 +88,49 @@
             android:hint="@string/editTextTituloAddMeuDia"
             android:inputType="textPersonName" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDescricaoAddMeuDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutTituloAddMeuDia">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextMsgAddMeuDia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/editTextMsgAddMeuDia"
+            android:inputType="textPostalAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textLabelCategoriaAddMeuDia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/textLabelCategoriaAddMeuDia"
+        android:textColor="#020202"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDescricaoAddMeuDia" />
+
+    <Spinner
+        android:id="@+id/tipoMeuDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLabelCategoriaAddMeuDia" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutDataAddMeuDia"

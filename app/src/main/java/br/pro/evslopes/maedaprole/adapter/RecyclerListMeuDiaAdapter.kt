@@ -21,6 +21,8 @@ class RecyclerListMeuDiaAdapter(
         val txtNomeMeuDia: TextView = itemView.findViewById(R.id.txtNomeMeuDia)
         val imgCategoria: ImageView = itemView.findViewById(R.id.imgCategoriaMeuDia)
         val txtDataMeuDia: TextView = itemView.findViewById(R.id.txtDataMeuDia)
+        val txtHoraMeuDia: TextView = itemView.findViewById(R.id.txtHoraMeuDia)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MeuDiaViewHolder {
@@ -34,6 +36,7 @@ class RecyclerListMeuDiaAdapter(
         val meuDia = meuDia[position]
         holder.txtNomeMeuDia.text = meuDia.titulo
         holder.txtDataMeuDia.text = meuDia.data.toString()
+        holder.txtHoraMeuDia.text = meuDia.hora.toString()
 
         var mBitmapIds = arrayListOf<Int>()
         var uris = arrayListOf<Uri>()

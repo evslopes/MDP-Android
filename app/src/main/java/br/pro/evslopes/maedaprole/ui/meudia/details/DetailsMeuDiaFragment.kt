@@ -67,10 +67,10 @@ class DetailsMeuDiaFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.M)
     private fun detalhesMeuDia (meuDia: MeuDia){
-        textViewLocalDetail.setText(meuDia.descricao!!.getClearText())
+        textViewDescricaolDetail.setText(meuDia.descricao!!.getClearText())
         textViewDataDetail.setText(meuDia.data)
         textViewHorarioDetail.setText(meuDia.hora)
-        textViewNomeDetail.setText(meuDia.titulo)
-        textViewCategoriaDetail.setText(meuDia.tipo)
+        textViewTituloDetail.setText(meuDia.titulo)
+        textViewTipoDetail.setText(meuDia.tipo)
     }
 }

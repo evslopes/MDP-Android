@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/imgCategoriaMeuDia"
-        android:layout_width="41dp"
-        android:layout_height="36dp"
+        android:layout_width="56dp"
+        android:layout_height="88dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
@@ -20,11 +20,12 @@
 
     <TextView
         android:id="@+id/txtNomeMeuDia"
-        android:layout_width="325dp"
-        android:layout_height="41dp"
+        android:layout_width="320dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="@string/HintTituloMeuDia"
+        android:textAlignment="center"
         android:textColor="#827717"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,15 +34,45 @@
 
     <TextView
         android:id="@+id/txtDataMeuDia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/HintDataMeuDia"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtHoraMeuDia"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeMeuDia"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtHoraMeuDia"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:hint="@string/HintDataMeuDia"
+        android:hint="@string/txtMeuDiaHora"
+        android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtNomeMeuDia" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#827717"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHoraMeuDia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
